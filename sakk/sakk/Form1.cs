@@ -312,42 +312,86 @@ namespace sakk
             {
                 jatekter[aktSor + 1, aktOszl + 1].BackColor = Color.Violet;
             }
-
+            else if(aktSor + 1 < 8 && aktOszl + 1 < 8 && jatekter[aktSor + 1, aktOszl + 1].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor + 1, aktOszl + 1].Name.Split('_')[2]) != aktSzin % 2)
+            {
+                jatekter[aktSor + 1, aktOszl + 1].BackColor = Color.Red;
+                utes = true;
+            }
+            
             if (aktSor + 1 < 8 && aktOszl - 1 >= 0 && jatekter[aktSor + 1, aktOszl - 1].BackgroundImage == null)
             {
                 jatekter[aktSor + 1, aktOszl - 1].BackColor = Color.Violet;
+            }
+            else if (aktSor + 1 < 8 && aktOszl - 1 < 8 && jatekter[aktSor + 1, aktOszl - 1].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor + 1, aktOszl - 1].Name.Split('_')[2]) != aktSzin % 2)
+            {
+                jatekter[aktSor + 1, aktOszl - 1].BackColor = Color.Red;
+                utes = true;
             }
 
             if (aktSor - 1 >= 0 && aktOszl + 1 < 8 && jatekter[aktSor - 1, aktOszl + 1].BackgroundImage == null)
             {
                 jatekter[aktSor - 1, aktOszl + 1].BackColor = Color.Violet;
             }
+            else if (aktSor - 1 >= 0 && aktOszl + 1 < 8 && jatekter[aktSor - 1, aktOszl + 1].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor - 1, aktOszl + 1].Name.Split('_')[2]) != aktSzin % 2)
+            {
+                jatekter[aktSor - 1, aktOszl + 1].BackColor = Color.Red;
+                utes = true;
+            }
 
             if (aktSor - 1 >= 0 && aktOszl - 1 >= 0 && jatekter[aktSor - 1, aktOszl - 1].BackgroundImage == null)
             {
                 jatekter[aktSor - 1, aktOszl - 1].BackColor = Color.Violet;
             }
+            else if (aktSor - 1 >= 0 && aktOszl - 1 >= 0 && jatekter[aktSor - 1, aktOszl - 1].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor - 1, aktOszl - 1].Name.Split('_')[2]) != aktSzin % 2)
+            {
+                jatekter[aktSor - 1, aktOszl - 1].BackColor = Color.Red;
+                utes = true;
+            }
+
 
             //Vízszint
             if (aktSor + 1 < 8 && jatekter[aktSor + 1, aktOszl].BackgroundImage == null)
             {
                 jatekter[aktSor + 1, aktOszl].BackColor = Color.Violet;
             }
+            else if (aktSor + 1 < 8 && jatekter[aktSor + 1, aktOszl].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor + 1, aktOszl].Name.Split('_')[2]) != aktSzin % 2)
+            {
+                jatekter[aktSor + 1, aktOszl].BackColor = Color.Red;
+                utes = true;
+            }
+
 
             if (aktSor - 1 >= 0 && jatekter[aktSor - 1, aktOszl].BackgroundImage == null)
             {
                 jatekter[aktSor - 1, aktOszl].BackColor = Color.Violet;
+            }
+            else if (aktSor - 1 >= 0 && jatekter[aktSor - 1, aktOszl].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor - 1, aktOszl].Name.Split('_')[2]) != aktSzin % 2)
+            {
+                jatekter[aktSor - 1, aktOszl].BackColor = Color.Red;
+                utes = true;
             }
 
             if (aktOszl + 1 < 8 && jatekter[aktSor, aktOszl + 1].BackgroundImage == null)
             {
                 jatekter[aktSor, aktOszl + 1].BackColor = Color.Violet;
             }
+            else if (aktOszl + 1 < 8 && jatekter[aktSor, aktOszl + 1].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor, aktOszl+1].Name.Split('_')[2]) != aktSzin % 2)
+            {
+                jatekter[aktSor, aktOszl+1].BackColor = Color.Red;
+                utes = true;
+            }
+            
 
             if (aktOszl - 1 >= 0 && jatekter[aktSor, aktOszl - 1].BackgroundImage == null)
             {
                 jatekter[aktSor, aktOszl - 1].BackColor = Color.Violet;
             }
+            else if (aktOszl - 1 >= 0 && jatekter[aktSor, aktOszl - 1].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor, aktOszl - 1].Name.Split('_')[2]) != aktSzin % 2)
+            {
+                jatekter[aktSor, aktOszl - 1].BackColor = Color.Red;
+                utes = true;
+            }
+
         }
 
         private void futoLepes(PictureBox klikkelt)
@@ -363,9 +407,15 @@ namespace sakk
                     {
                         jatekter[aktSor + i, aktOszl + i].BackColor = Color.Violet;
                     }
+                    
                     else
                     {
                         mehet += "0";
+                        if (jatekter[aktSor + i, aktOszl + i].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor + i, aktOszl + i].Name.Split('_')[2]) != aktSzin % 2)
+                        {
+                            jatekter[aktSor + i, aktOszl + i].BackColor = Color.Red;
+                            utes = true;
+                        }
                     }
                 }
 
@@ -375,9 +425,15 @@ namespace sakk
                     {
                         jatekter[aktSor - i, aktOszl + i].BackColor = Color.Violet;
                     }
+                   
                     else
                     {
                         mehet += "1";
+                        if (jatekter[aktSor - i, aktOszl + i].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor - i, aktOszl + i].Name.Split('_')[2]) != aktSzin % 2)
+                        {
+                            jatekter[aktSor - i, aktOszl + i].BackColor = Color.Red;
+                            utes = true;
+                        }
                     }
                 }
 
@@ -387,9 +443,15 @@ namespace sakk
                     {
                         jatekter[aktSor - i, aktOszl - i].BackColor = Color.Violet;
                     }
+                   
                     else
                     {
                         mehet += "2";
+                        if (jatekter[aktSor - i, aktOszl - i].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor - i, aktOszl - i].Name.Split('_')[2]) != aktSzin % 2)
+                        {
+                            jatekter[aktSor - i, aktOszl - i].BackColor = Color.Red;
+                            utes = true;
+                        }
                     }
                 }
 
@@ -399,14 +461,20 @@ namespace sakk
                     {
                         jatekter[aktSor + i, aktOszl - i].BackColor = Color.Violet;
                     }
+                    
                     else
                     {
                         mehet += "3";
+                        if (jatekter[aktSor + i, aktOszl - i].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor + i, aktOszl - i].Name.Split('_')[2]) != aktSzin % 2)
+                        {
+                            jatekter[aktSor + i, aktOszl - i].BackColor = Color.Red;
+                            utes = true;
+                        }
                     }
                 }
             }
         }
-
+        
         private void bastyaLepes(PictureBox klikkelt)
         {
             int aktSor = Convert.ToInt32(klikkelt.Name.Split('_')[0]);
@@ -423,6 +491,11 @@ namespace sakk
                     else
                     {
                         mehet += "0";
+                        if (jatekter[aktSor + i, aktOszl].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor + i, aktOszl].Name.Split('_')[2]) != aktSzin % 2)
+                        {
+                            jatekter[aktSor + i, aktOszl].BackColor = Color.Red;
+                            utes = true;
+                        }
                     }
                 }
 
@@ -435,6 +508,11 @@ namespace sakk
                     else
                     {
                         mehet += "1";
+                        if (jatekter[aktSor - i, aktOszl].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor - i, aktOszl].Name.Split('_')[2]) != aktSzin % 2)
+                        {
+                            jatekter[aktSor - i, aktOszl].BackColor = Color.Red;
+                            utes = true;
+                        }
                     }
                 }
 
@@ -447,6 +525,11 @@ namespace sakk
                     else
                     {
                         mehet += "2";
+                        if (jatekter[aktSor, aktOszl + i].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor, aktOszl + i].Name.Split('_')[2]) != aktSzin % 2)
+                        {
+                            jatekter[aktSor, aktOszl + i].BackColor = Color.Red;
+                            utes = true;
+                        }
                     }
                 }
 
@@ -459,6 +542,11 @@ namespace sakk
                     else
                     {
                         mehet += "3";
+                        if (jatekter[aktSor, aktOszl - i].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor, aktOszl - i].Name.Split('_')[2]) != aktSzin % 2)
+                        {
+                            jatekter[aktSor, aktOszl - i].BackColor = Color.Red;
+                            utes = true;
+                        }
                     }
                 }
             }
