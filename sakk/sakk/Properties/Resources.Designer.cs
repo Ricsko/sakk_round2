@@ -63,6 +63,16 @@ namespace sakk.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap also {
+            get {
+                object obj = ResourceManager.GetObject("also", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap credits {
             get {
                 object obj = ResourceManager.GetObject("credits", resourceCulture);
@@ -136,6 +146,16 @@ namespace sakk.Properties {
         internal static System.Drawing.Bitmap JATEKOS2 {
             get {
                 object obj = ResourceManager.GetObject("JATEKOS2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mario {
+            get {
+                object obj = ResourceManager.GetObject("mario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
