@@ -108,85 +108,84 @@ namespace sakk
         private void babuGen()
         {
             //FEHÉR BÁBÚK
-
             jatekter[0, 0].BackgroundImage = babuk.Images[0];
-            jatekter[0, 0].Name += "_0_bastya";
+            jatekter[0, 0].Name += "_0_Bástya";
             babukfeher.Add(jatekter[0, 0].Name.Split('_')[3]);
 
             jatekter[0, 7].BackgroundImage = babuk.Images[0];
-            jatekter[0, 7].Name += "_0_bastya";
+            jatekter[0, 7].Name += "_0_Bástya";
             babukfeher.Add(jatekter[0, 7].Name.Split('_')[3]);
 
             jatekter[0, 1].BackgroundImage = babuk.Images[1];
-            jatekter[0, 1].Name += "_0_huszar";
+            jatekter[0, 1].Name += "_0_Huszár"; 
             babukfeher.Add(jatekter[0, 1].Name.Split('_')[3]);
 
             jatekter[0, 6].BackgroundImage = babuk.Images[1];
-            jatekter[0, 6].Name += "_0_huszar";
+            jatekter[0, 6].Name += "_0_Huszár";
             babukfeher.Add(jatekter[0, 6].Name.Split('_')[3]);
 
             jatekter[0, 2].BackgroundImage = babuk.Images[2];
-            jatekter[0, 2].Name += "_0_futo";
+            jatekter[0, 2].Name += "_0_Futó";
             babukfeher.Add(jatekter[0, 2].Name.Split('_')[3]);
 
             jatekter[0, 5].BackgroundImage = babuk.Images[2];
-            jatekter[0, 5].Name += "_0_futo";
+            jatekter[0, 5].Name += "_0_Futó";
             babukfeher.Add(jatekter[0, 5].Name.Split('_')[3]);
 
             jatekter[0, 3].BackgroundImage = babuk.Images[4];
-            jatekter[0, 3].Name += "_0_kiralyno";
+            jatekter[0, 3].Name += "_0_Királynő";
             babukfeher.Add(jatekter[0, 3].Name.Split('_')[3]);
 
             jatekter[0, 4].BackgroundImage = babuk.Images[3];
-            jatekter[0, 4].Name += "_0_kiraly";
+            jatekter[0, 4].Name += "_0_Király";
             babukfeher.Add(jatekter[0, 4].Name.Split('_')[3]);
 
 
             for (int i = 0; i < 8; i++)
             {
                 jatekter[1, i].BackgroundImage = babuk.Images[5];
-                jatekter[1, i].Name += $"_0_paraszt";
+                jatekter[1, i].Name += $"_0_Gyalog";
                 babukfeher.Add(jatekter[1, i].Name.Split('_')[3]);
             }
 
 
             //FEKETE BÁBÚK
             jatekter[7, 0].BackgroundImage = babuk.Images[6];
-            jatekter[7, 0].Name += "_1_bastya";
+            jatekter[7, 0].Name += "_1_Bástya";
             babukfekete.Add(jatekter[7, 0].Name.Split('_')[3]);
 
             jatekter[7, 7].BackgroundImage = babuk.Images[6];
-            jatekter[7, 7].Name += "_1_bastya";
+            jatekter[7, 7].Name += "_1_Bástya";
             babukfekete.Add(jatekter[7, 7].Name.Split('_')[3]);
 
             jatekter[7, 1].BackgroundImage = babuk.Images[7];
-            jatekter[7, 1].Name += "_1_huszar";
+            jatekter[7, 1].Name += "_1_Huszár";
             babukfekete.Add(jatekter[7, 1].Name.Split('_')[3]);
 
             jatekter[7, 6].BackgroundImage = babuk.Images[7];
-            jatekter[7, 6].Name += "_1_huszar";
+            jatekter[7, 6].Name += "_1_Huszár";
             babukfekete.Add(jatekter[7, 6].Name.Split('_')[3]);
 
             jatekter[7, 2].BackgroundImage = babuk.Images[8];
-            jatekter[7, 2].Name += "_1_futo";
+            jatekter[7, 2].Name += "_1_Futó";
             babukfekete.Add(jatekter[7, 2].Name.Split('_')[3]);
 
             jatekter[7, 5].BackgroundImage = babuk.Images[8];
-            jatekter[7, 5].Name += "_1_futo";
+            jatekter[7, 5].Name += "_1_Futó";
             babukfekete.Add(jatekter[7, 5].Name.Split('_')[3]);
 
             jatekter[7, 3].BackgroundImage = babuk.Images[10];
-            jatekter[7, 3].Name += "_1_kiralyno";
+            jatekter[7, 3].Name += "_1_Királynő";
             babukfekete.Add(jatekter[7, 3].Name.Split('_')[3]);
 
             jatekter[7, 4].BackgroundImage = babuk.Images[9];
-            jatekter[7, 4].Name += "_1_kiraly";
+            jatekter[7, 4].Name += "_1_Király";
             babukfekete.Add(jatekter[7, 4].Name.Split('_')[3]);
 
             for (int i = 0; i < 8; i++)
             {
                 jatekter[6, i].BackgroundImage = babuk.Images[11];
-                jatekter[6, i].Name += $"_1_paraszt";
+                jatekter[6, i].Name += $"_1_Gyalog";
                 babukfekete.Add(jatekter[6, i].Name.Split('_')[3]);
             }
         }
@@ -194,88 +193,321 @@ namespace sakk
         private void mozgatasClick(object sender, EventArgs e)
         {
             PictureBox klikkelt = sender as PictureBox;
-            string babuTipus = "";
-            int babuSzin = -1;
+            string tipus = "";
+            int szin = -1;
 
             if (klikkelt.BackgroundImage != null)
-            {
-                babuTipus = klikkelt.Name.Split('_')[3];
-                babuSzin = Convert.ToInt32(klikkelt.Name.Split('_')[2]);
-            }
+            { 
+                szin = Convert.ToInt32(klikkelt.Name.Split('_')[2]);
 
-            switch (babuTipus)
-            {
-                case "paraszt":
-                    lepesParaszt(klikkelt);
-                    break;
-
-                case "bastya":
-                    lepesBastya(klikkelt);
-                    break;
-            }
-
-            if (klikkelt.BackColor == Color.Violet && aktBabu.BackgroundImage != null)
-            {
-                klikkelt.BackgroundImage = aktBabu.BackgroundImage;
-                klikkelt.Name += $"_{aktBabu.Name.Split('_')[2]}_{aktBabu.Name.Split('_')[3]}";
-                jatekter[Convert.ToInt32(aktBabu.Name.Split('_')[0]), Convert.ToInt32(aktBabu.Name.Split('_')[1])].BackgroundImage = null;
-                jatekter[Convert.ToInt32(aktBabu.Name.Split('_')[0]), Convert.ToInt32(aktBabu.Name.Split('_')[1])].Name = $"{aktBabu.Name.Split('_')[0]}_{aktBabu.Name.Split('_')[1]}";
-
-                if ((Convert.ToInt32(klikkelt.Name.Split('_')[0]) + Convert.ToInt32(klikkelt.Name.Split('_')[1])) % 2 == 0)
+                if (aktSzin % 2 == szin)
                 {
-                    jatekter[Convert.ToInt32(klikkelt.Name.Split('_')[0]), Convert.ToInt32(klikkelt.Name.Split('_')[1])].BackColor = Color.Purple;
+                    aktBabu.BackgroundImage = klikkelt.BackgroundImage;
+                    aktBabu.Name = klikkelt.Name;
+                    tipus = aktBabu.Name.Split('_')[3];
                 }
                 else
                 {
-                    jatekter[Convert.ToInt32(klikkelt.Name.Split('_')[0]), Convert.ToInt32(klikkelt.Name.Split('_')[1])].BackColor = Color.Pink;
+                    MessageBox.Show("Nem te vagy a soron lévő játékos!");
                 }
 
-                aktSzin++;
+                szinekKi();
+            }
+            
+
+            MessageBox.Show(tipus);
+
+            switch (tipus)
+            {
+                case "Gyalog":
+                    gyalogLepes(klikkelt);
+                    break;
+
+                case "Huszár":
+                    huszarLepes(klikkelt);
+                    break;
+
+                case "Bástya":
+                    bastyaLepes(klikkelt);
+                    break;
+
+                case "Futó":
+                    futoLepes(klikkelt);
+                    break;
+
+                case "Királynő":
+                    futoLepes(klikkelt);
+                    bastyaLepes(klikkelt);
+                    break;
+
+                case "Király":
+                    kiralyLepes(klikkelt);
+                    break;
             }
 
-            MessageBox.Show(klikkelt.Name);
+            //Léptetés
+            leptetes(klikkelt);
         }
 
-        private void lepesBastya(PictureBox klikkelt)
+        private void kiralyLepes(PictureBox klikkelt)
         {
-            aktBabu.Name = klikkelt.Name;
-            aktBabu.BackgroundImage = klikkelt.BackgroundImage;
+            int aktSor = Convert.ToInt32(aktBabu.Name.Split('_')[0]);
+            int aktOszl = Convert.ToInt32(aktBabu.Name.Split('_')[1]);
 
-            int sor = Convert.ToInt32(aktBabu.Name.Split('_')[0]);
-            int oszl = Convert.ToInt32(aktBabu.Name.Split('_')[1]);
-            int babuSzin = Convert.ToInt32(aktBabu.Name.Split('_')[2]);
-            
-            
+            //Átlók
+            if (aktSor + 1 < 8 && aktOszl + 1 < 8 && jatekter[aktSor + 1, aktOszl + 1].BackgroundImage == null)
+            {
+                jatekter[aktSor + 1, aktOszl + 1].BackColor = Color.Violet;
+            }
+
+            if (aktSor + 1 < 8 && aktOszl - 1 >= 0 && jatekter[aktSor + 1, aktOszl - 1].BackgroundImage == null)
+            {
+                jatekter[aktSor + 1, aktOszl - 1].BackColor = Color.Violet;
+            }
+
+            if (aktSor - 1 >= 0 && aktOszl + 1 < 8 && jatekter[aktSor - 1, aktOszl + 1].BackgroundImage == null)
+            {
+                jatekter[aktSor - 1, aktOszl + 1].BackColor = Color.Violet;
+            }
+
+            if (aktSor - 1 >= 0 && aktOszl - 1 >= 0 && jatekter[aktSor - 1, aktOszl - 1].BackgroundImage == null)
+            {
+                jatekter[aktSor - 1, aktOszl - 1].BackColor = Color.Violet;
+            }
+
+            //Vízszint
+            if (aktSor + 1 < 8 && jatekter[aktSor + 1, aktOszl].BackgroundImage == null)
+            {
+                jatekter[aktSor + 1, aktOszl].BackColor = Color.Violet;
+            }
+
+            if (aktSor - 1 >= 0 && jatekter[aktSor - 1, aktOszl].BackgroundImage == null)
+            {
+                jatekter[aktSor - 1, aktOszl].BackColor = Color.Violet;
+            }
+
+            if (aktOszl + 1 < 8 && jatekter[aktSor, aktOszl + 1].BackgroundImage == null)
+            {
+                jatekter[aktSor, aktOszl + 1].BackColor = Color.Violet;
+            }
+
+            if (aktOszl - 1 >= 0 && jatekter[aktSor , aktOszl - 1].BackgroundImage == null)
+            {
+                jatekter[aktSor, aktOszl - 1].BackColor = Color.Violet;
+            }
         }
 
-        private void lepesParaszt(PictureBox klikkelt)
+        private void futoLepes(PictureBox klikkelt)
         {
-            aktBabu.Name = klikkelt.Name;
-            aktBabu.BackgroundImage = klikkelt.BackgroundImage;
-
-            int sor = Convert.ToInt32(aktBabu.Name.Split('_')[0]);
-            int oszl = Convert.ToInt32(aktBabu.Name.Split('_')[1]);
-            int babuSzin = Convert.ToInt32(aktBabu.Name.Split('_')[2]);
-            int segedSzorz = 1;
-
-            if (babuSzin == 1)
+            int aktSor = Convert.ToInt32(klikkelt.Name.Split('_')[0]);
+            int aktOszl = Convert.ToInt32(klikkelt.Name.Split('_')[1]);
+            string mehet = "";
+            for (int i = 1; i < 8; i++)
             {
-                segedSzorz = -segedSzorz;
+                if (aktSor + i < 8 && aktOszl + i < 8 && !mehet.Contains("0"))
+                {
+                    if (jatekter[aktSor + i, aktOszl + i].BackgroundImage == null)
+                    {
+                        jatekter[aktSor + i, aktOszl + i].BackColor = Color.Violet;
+                    }
+                    else
+                    {
+                        mehet += "0";
+                    }
+                }
+
+                if (aktSor - i >= 0 && aktOszl + i < 8 && !mehet.Contains("1"))
+                {
+                    if (jatekter[aktSor - i, aktOszl + i].BackgroundImage == null)
+                    {
+                        jatekter[aktSor - i, aktOszl + i].BackColor = Color.Violet;
+                    }
+                    else
+                    {
+                        mehet += "1";
+                    }
+                }
+
+                if (aktSor - i >= 0 && aktOszl - i >= 0 && !mehet.Contains("2"))
+                {
+                    if (jatekter[aktSor - i, aktOszl - i].BackgroundImage == null)
+                    {
+                        jatekter[aktSor - i, aktOszl - i].BackColor = Color.Violet;
+                    }
+                    else
+                    {
+                        mehet += "2";
+                    }
+                }
+
+                if (aktSor + i < 8 && aktOszl - i >= 0 && !mehet.Contains("3"))
+                {
+                    if (jatekter[aktSor + i, aktOszl - i].BackgroundImage == null)
+                    {
+                        jatekter[aktSor + i, aktOszl - i].BackColor = Color.Violet;
+                    }
+                    else
+                    {
+                        mehet += "3";
+                    }
+                }
             }
-            else
+        }
+
+        private void bastyaLepes(PictureBox klikkelt)
+        {
+            int aktSor = Convert.ToInt32(klikkelt.Name.Split('_')[0]);
+            int aktOszl = Convert.ToInt32(klikkelt.Name.Split('_')[1]);
+            string mehet = "";
+            for (int i = 1; i < 8; i++)
             {
-                segedSzorz = 1;
+                if (aktSor + i < 8 && !mehet.Contains("0"))
+                {
+                    if(jatekter[aktSor + i, aktOszl].BackgroundImage == null)
+                    {
+                        jatekter[aktSor + i, aktOszl].BackColor = Color.Violet;
+                    }
+                    else
+                    {
+                        mehet += "0";
+                    }
+                }
+
+                if (aktSor - i >= 0 && !mehet.Contains("1"))
+                {
+                    if (jatekter[aktSor - i, aktOszl].BackgroundImage == null)
+                    {
+                        jatekter[aktSor - i, aktOszl].BackColor = Color.Violet;
+                    }
+                    else
+                    {
+                        mehet += "1";
+                    }
+                }
+
+                if (aktOszl + i < 8 && !mehet.Contains("2"))
+                {
+                    if(jatekter[aktSor, aktOszl + i].BackgroundImage == null)
+                    {
+                        jatekter[aktSor, aktOszl + i].BackColor = Color.Violet;
+                    }
+                    else
+                    {
+                        mehet += "2";
+                    }
+                }
+
+                if (aktOszl - i >= 0 && !mehet.Contains("3"))
+                {
+                    if(jatekter[aktSor, aktOszl - i].BackgroundImage == null)
+                    {
+                        jatekter[aktSor, aktOszl - i].BackColor = Color.Violet;
+                    }
+                    else
+                    {
+                        mehet += "3";
+                    }
+                }
+            }
+        }
+
+        private void huszarLepes(PictureBox klikkelt)
+        {
+            int aktSor = Convert.ToInt32(aktBabu.Name.Split('_')[0]);
+            int aktOszl = Convert.ToInt32(aktBabu.Name.Split('_')[1]);
+
+            if (aktSor + 2 < 8 && aktOszl + 1 < 8 && jatekter[aktSor + 2, aktOszl + 1].BackgroundImage == null)
+            {
+                jatekter[aktSor + 2, aktOszl + 1].BackColor = Color.Violet;
             }
 
-            if(jatekter[sor + segedSzorz, oszl].BackgroundImage != null)
+            if (aktSor + 2 < 8 && aktOszl - 1 >= 0 && jatekter[aktSor + 2, aktOszl - 1].BackgroundImage == null)
             {
-                MessageBox.Show("A kiválaztott bábu nem képes a lépésre!");
+                jatekter[aktSor + 2, aktOszl - 1].BackColor = Color.Violet;
+            }
+
+            if (aktSor - 2 >= 0 && aktOszl + 1 < 8 && jatekter[aktSor - 2, aktOszl + 1].BackgroundImage == null)
+            {
+                jatekter[aktSor - 2, aktOszl + 1].BackColor = Color.Violet;
+            }
+
+            if (aktSor - 2 >= 0 && aktOszl - 1 >= 0 && jatekter[aktSor - 2, aktOszl - 1].BackgroundImage == null) 
+            {
+                jatekter[aktSor - 2, aktOszl - 1].BackColor = Color.Violet;
+            }
+
+            if (aktSor + 1 < 8 && aktOszl + 2 < 8 && jatekter[aktSor + 1, aktOszl + 2].BackgroundImage == null) 
+            {
+                jatekter[aktSor + 1, aktOszl + 2].BackColor = Color.Violet;
+            }
+
+            if (aktSor + 1 < 8 && aktOszl - 2 >= 0 && jatekter[aktSor + 1, aktOszl - 2].BackgroundImage == null) 
+            {
+                jatekter[aktSor + 1, aktOszl - 2].BackColor = Color.Violet;
+            }
+
+            if (aktSor - 1 >= 0 && aktOszl + 2 < 8 && jatekter[aktSor - 1, aktOszl + 2].BackgroundImage == null) 
+            {
+                jatekter[aktSor - 1, aktOszl + 2].BackColor = Color.Violet;
+            }
+
+            if (aktSor - 1 >= 0 && aktOszl - 2 >= 0 && jatekter[aktSor - 1, aktOszl - 2].BackgroundImage == null) 
+            {
+                jatekter[aktSor - 1, aktOszl - 2].BackColor = Color.Violet;
+            }
+        }
+
+        private void gyalogLepes(PictureBox klikkelt)
+        {
+            int aktSor = Convert.ToInt32(klikkelt.Name.Split('_')[0]);
+            int aktOszl = Convert.ToInt32(klikkelt.Name.Split('_')[1]);
+            int szin = Convert.ToInt32(klikkelt.Name.Split('_')[2]);
+            int seged = -1;
+
+            if (szin == 0)
+            {
+                seged = 1;
+            }
+
+            jatekter[aktSor + seged, aktOszl].BackColor = Color.Violet;
+        }
+
+        private void leptetes(PictureBox klikkelt)
+        {
+            if (aktBabu.Name != "" && klikkelt.BackColor == Color.Violet)
+            {
+                int aktSor = Convert.ToInt32(aktBabu.Name.Split('_')[0]);
+                int aktOszl = Convert.ToInt32(aktBabu.Name.Split('_')[1]);
+
+                klikkelt.BackgroundImage = aktBabu.BackgroundImage;
+                klikkelt.Name += $"_{aktBabu.Name.Split('_')[2]}_{aktBabu.Name.Split('_')[3]}";
+
+                jatekter[aktSor, aktOszl].BackgroundImage = null;
+                jatekter[aktSor, aktOszl].Name = $"{aktSor}_{aktOszl}";
+
                 aktBabu.BackgroundImage = null;
                 aktBabu.Name = "";
+
+                aktSzin++;
+                szinekKi();
             }
-            else
+        }
+
+        private void szinekKi()
+        {
+            for (int i = 0; i < 8; i++)
             {
-                jatekter[sor + segedSzorz, oszl].BackColor = Color.Violet;
+                for (int j = 0; j < 8; j++)
+                {
+                    if ((i + j) % 2 == 0)
+                    {
+                        jatekter[i, j].BackColor = Color.Purple;
+                    }
+                    else
+                    {
+                        jatekter[i, j].BackColor = Color.Pink;
+                    }
+                }
             }
         }
 

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\sakk",
+    "\\sakk\\sakk"
   ],
-  "SelectedNode": "\\sakk.sln",
+  "SelectedNode": "\\sakk\\sakk\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
