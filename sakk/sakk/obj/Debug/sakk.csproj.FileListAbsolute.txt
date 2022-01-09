@@ -18,3 +18,13 @@ C:\Users\user\Desktop\SUSU\sakkPrijekt\sakk\sakk\obj\Debug\sakk.csproj.GenerateR
 C:\Users\user\Desktop\SUSU\sakkPrijekt\sakk\sakk\obj\Debug\sakk.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\SUSU\sakkPrijekt\sakk\sakk\obj\Debug\sakk.exe
 C:\Users\user\Desktop\SUSU\sakkPrijekt\sakk\sakk\obj\Debug\sakk.pdb
+D:\programozás\sakk\sakk\sakk\bin\Debug\sakk.exe.config
+D:\programozás\sakk\sakk\sakk\bin\Debug\sakk.exe
+D:\programozás\sakk\sakk\sakk\bin\Debug\sakk.pdb
+D:\programozás\sakk\sakk\sakk\obj\Debug\sakk.csprojAssemblyReference.cache
+D:\programozás\sakk\sakk\sakk\obj\Debug\sakk.Form1.resources
+D:\programozás\sakk\sakk\sakk\obj\Debug\sakk.Properties.Resources.resources
+D:\programozás\sakk\sakk\sakk\obj\Debug\sakk.csproj.GenerateResource.cache
+D:\programozás\sakk\sakk\sakk\obj\Debug\sakk.csproj.CoreCompileInputs.cache
+D:\programozás\sakk\sakk\sakk\obj\Debug\sakk.exe
+D:\programozás\sakk\sakk\sakk\obj\Debug\sakk.pdb

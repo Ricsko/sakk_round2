@@ -46,6 +46,7 @@ namespace sakk
             this.whtsurrenderBTN = new System.Windows.Forms.PictureBox();
             this.blcksurrenderBTN = new System.Windows.Forms.PictureBox();
             this.credits = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inditas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jatekos1)).BeginInit();
@@ -56,6 +57,7 @@ namespace sakk
             ((System.ComponentModel.ISupportInitialize)(this.whtsurrenderBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blcksurrenderBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.credits)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // jatekos1TBOX
@@ -106,7 +108,7 @@ namespace sakk
             this.inditas.BackColor = System.Drawing.Color.Transparent;
             this.inditas.BackgroundImage = global::sakk.Properties.Resources.inditas;
             this.inditas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.inditas.Location = new System.Drawing.Point(604, 377);
+            this.inditas.Location = new System.Drawing.Point(604, 348);
             this.inditas.Name = "inditas";
             this.inditas.Size = new System.Drawing.Size(184, 61);
             this.inditas.TabIndex = 7;
@@ -139,7 +141,7 @@ namespace sakk
             this.szabalyok.BackColor = System.Drawing.Color.Transparent;
             this.szabalyok.BackgroundImage = global::sakk.Properties.Resources.SZABALYOK;
             this.szabalyok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.szabalyok.Location = new System.Drawing.Point(404, 377);
+            this.szabalyok.Location = new System.Drawing.Point(414, 348);
             this.szabalyok.Name = "szabalyok";
             this.szabalyok.Size = new System.Drawing.Size(184, 61);
             this.szabalyok.TabIndex = 10;
@@ -175,7 +177,7 @@ namespace sakk
             // 
             this.kep.BackColor = System.Drawing.Color.Transparent;
             this.kep.BackgroundImage = global::sakk.Properties.Resources.nemtom;
-            this.kep.Location = new System.Drawing.Point(442, 160);
+            this.kep.Location = new System.Drawing.Point(453, 132);
             this.kep.Name = "kep";
             this.kep.Size = new System.Drawing.Size(300, 200);
             this.kep.TabIndex = 12;
@@ -211,11 +213,21 @@ namespace sakk
             // 
             this.credits.BackColor = System.Drawing.Color.Transparent;
             this.credits.BackgroundImage = global::sakk.Properties.Resources.credits;
-            this.credits.Location = new System.Drawing.Point(12, 366);
+            this.credits.Location = new System.Drawing.Point(12, 319);
             this.credits.Name = "credits";
             this.credits.Size = new System.Drawing.Size(159, 119);
             this.credits.TabIndex = 17;
             this.credits.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::sakk.Properties.Resources.also;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 403);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(800, 47);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -224,6 +236,7 @@ namespace sakk
             this.BackgroundImage = global::sakk.Properties.Resources.hatter;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.credits);
             this.Controls.Add(this.blcksurrenderBTN);
             this.Controls.Add(this.whtsurrenderBTN);
@@ -251,6 +264,7 @@ namespace sakk
             ((System.ComponentModel.ISupportInitialize)(this.whtsurrenderBTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blcksurrenderBTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.credits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +287,7 @@ namespace sakk
         private System.Windows.Forms.PictureBox whtsurrenderBTN;
         private System.Windows.Forms.PictureBox blcksurrenderBTN;
         private System.Windows.Forms.PictureBox credits;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
