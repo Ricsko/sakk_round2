@@ -650,38 +650,11 @@ namespace sakk
             {
                 seged = 1;
             }
-
-
-            //JOBB ÁTLÓ
-           /* if (aktSor + seged > 8 || aktOszl + seged > 8)
-            {
-                if (jatekter[aktSor + seged, aktOszl + seged].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor + seged, aktOszl + seged].Name.Split('_')[2]) != szin)
-                {
-                    jatekter[aktSor + seged, aktOszl + seged].BackColor = Color.Red;
-                    utes = true;
-                }
-            }
-
-
-            
-            //BAL ÁTLÓ
-            if (aktSor + seged > 8 && aktOszl - seged >= 0)
-            {
-                if (jatekter[aktSor + seged, aktOszl - seged].BackgroundImage != null && Convert.ToInt32(jatekter[aktSor + seged, aktOszl - seged].Name.Split('_')[2]) != szin)
-                {
-                    jatekter[aktSor + seged, aktOszl - seged].BackColor = Color.Red;
-                    utes = true;
-                }
-            }*/
-
             
             if(jatekter[aktSor + seged, aktOszl].BackgroundImage == null)
             {
                 jatekter[aktSor + seged, aktOszl].BackColor = Color.Violet;
             }
-            
-            
-            
         }
 
         private void leptetes(PictureBox klikkelt)
